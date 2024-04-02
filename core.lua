@@ -319,7 +319,7 @@ local function flattypename(r)
 						if v.name == key and buildin_types[v.typename] then
 							f.key=v.name
 							f.map_keyfield = v
-							f.map_valuefield = f
+							-- f.map_valuefield = f -- 循环引用
 							reason = false
 							break
 						end
